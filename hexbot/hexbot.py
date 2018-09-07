@@ -4,6 +4,14 @@
 
 
 import discord
+import json
+
+class Configuration:
+    def __init__(self, fileDir):
+        f = open(fileDir, "r")
+        jstr = f.read()
+        jsn = json.loads(jstr)
+        self.botToken = jsn["token"]
 
 class MyClient(discord.Client):
     async def on_ready(self):
@@ -13,5 +21,6 @@ class MyClient(discord.Client):
         print('Message from {0.author}: {0.content}'.format(message))
 
 #Initzalizing Client and Running Client
+clientConfig = Configuration("/var/botcfg.json")
 client = MyClient()
-client.run('NDg3NDkxNjE2Mzc0Nzg0MDAw.DnOcvA.tRhKusrggXudLNtYW5Pwo00hxME')
+client.run(clientConfig.botToken)
