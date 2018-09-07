@@ -11,7 +11,7 @@ class Configuration:
         f = open(fileDir, "r")
         jstr = f.read()
         jsn = json.loads(jstr)
-        self.botToken = jsn.token
+        self.botToken = jsn["token"]
 
 class MyClient(discord.Client):
     async def on_ready(self):
