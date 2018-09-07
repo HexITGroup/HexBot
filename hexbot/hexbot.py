@@ -1,8 +1,6 @@
 #HexBot Created by TechnicSparks
 #Bot created for the HexIT Discord server!
 
-
-
 import discord
 import json
 
@@ -21,6 +19,6 @@ class MyClient(discord.Client):
         print('Message from {0.author}: {0.content}'.format(message))
 
 #Initzalizing Client and Running Client
-clientConfig = Configuration("/var/botcfg.json")
+clientConfig = Configuration("botcfg.json")
 client = MyClient()
 client.run(clientConfig.botToken)
