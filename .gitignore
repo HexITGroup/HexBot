@@ -109,3 +109,6 @@ Pipfile
 
 #vscode
 .vscode
+
+#extras
+botcfg.json
