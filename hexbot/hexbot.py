@@ -1,4 +1,4 @@
-# HexBot Created by TechnicSparks
+# HexBot Created by TechnicSparks - Help from Clipsey & Eragon
 # Bot created for the HexIT Discord server!
 
 import discord
@@ -81,5 +81,5 @@ async def setprefix_error(error, ctx):
 
 
 # Initzalizing Client and Running Client
-botConfig = token_handle("/var/botcfg.json")
+botConfig = token_handle("botcfg.json")
 bot.run(botConfig)
